@@ -12,7 +12,7 @@ def generate_pure_tone(frequency, sample_rate, duration):
     @return:
     x (array) - the pure tone signal
     '''
-    t = np.linspace(0,duration,sample_rate)
+    t = np.linspace(0,duration,int(duration*sample_rate))
     x = np.sin(2*np.pi*frequency*t)
     return(x)
 
