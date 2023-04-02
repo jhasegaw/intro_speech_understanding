@@ -1,7 +1,8 @@
 # intro_speech_understanding
 
-This repository contains assignments for the KCGI graduate course
-"Intro to Speech Understanding."
+This repository contains assignments for the <a
+href="https://www.kcg.edu/">KCGI</a> graduate course "Intro to Speech
+Understanding."
 
 ## Getting Started
 
