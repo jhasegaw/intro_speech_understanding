@@ -3,9 +3,7 @@
 This repository contains assignments for the KCGI graduate course
 "Intro to Speech Understanding."
 
-## Recommended use
-
-### Getting Started
+## Getting Started
 
 Clone the course directory by typing:
 
@@ -16,7 +14,7 @@ git clone https://github.com/jhasegaw/intro_speech_understanding
 This will create the directory `intro_speech_understanding`, and will
 fill it with all of the code and assignments that have been published so far.
 
-### Weekly Update
+## Weekly Update
 
 Every week, before lecture, `cd` to the directory
 `intro_speech_understanding`, and then do the following:
@@ -39,7 +37,7 @@ command `git merge -m "comment"` merges the downloaded assignments,
 together with your own work, into the directory that's visible on your
 own machine.
 
-### How to Recover from Disaster
+## Disaster Recovery
 
 When you are new to git, you will often find that git is asking you a
 question that you don't know how to answer.
@@ -49,7 +47,7 @@ new directory, and type `git clone
 https://github.com/jhasegaw/intro_speech_understanding` again.  This
 will give you a completely new copy of the directory, so you can start over.
 
-### More Information
+## More Information
 
 This course will not give you an extensive tutorial on git, but there
 is a lot of information online, e.g., at <a
