@@ -3,7 +3,7 @@
 This repository contains assignments for the KCGI graduate course
 "Intro to Speech Understanding."  Recommended use:
 
-    #. Clone the course directory by typing:
+1. Clone the course directory by typing:
 
 ```
 git clone https://github.com/jhasegaw/intro_speech_understanding
@@ -12,7 +12,7 @@ git clone https://github.com/jhasegaw/intro_speech_understanding
 This will create the directory `intro_speech_understanding`, and will
 fill it with all of the code and assignments that have been published so far.
 
-    #. Every week, before lecture, `cd` to the directory
+2. Every week, before lecture, `cd` to the directory
 `intro_speech_understanding`, and then do the following:
 
 ```
