@@ -1,9 +1,13 @@
 # intro_speech_understanding
 
 This repository contains assignments for the KCGI graduate course
-"Intro to Speech Understanding."  Recommended use:
+"Intro to Speech Understanding."
 
-1. Clone the course directory by typing:
+## Recommended use
+
+### Getting Started
+
+Clone the course directory by typing:
 
 ```
 git clone https://github.com/jhasegaw/intro_speech_understanding
@@ -12,7 +16,9 @@ git clone https://github.com/jhasegaw/intro_speech_understanding
 This will create the directory `intro_speech_understanding`, and will
 fill it with all of the code and assignments that have been published so far.
 
-2. Every week, before lecture, `cd` to the directory
+### Weekly Update
+
+Every week, before lecture, `cd` to the directory
 `intro_speech_understanding`, and then do the following:
 
 ```
@@ -33,9 +39,23 @@ command `git merge -m "comment"` merges the downloaded assignments,
 together with your own work, into the directory that's visible on your
 own machine.
 
-If you have edited a file, and if the github repository has also
-edited the same file, then `git` will open a text editor (probably <a
-href="https://www.cs.colostate.edu/helpdocs/vi.html">vi</a>), and show
-you the conflicting edits.  You'll need to decide how to resolve each
-conflict, and then save the file.
+### How to Recover from Disaster
+
+When you are new to git, you will often find that git is asking you a
+question that you don't know how to answer.
+
+If that happens, the easiest solution is to just go to a completely
+new directory, and type `git clone
+https://github.com/jhasegaw/intro_speech_understanding` again.  This
+will give you a completely new copy of the directory, so you can start over.
+
+### More Information
+
+This course will not give you an extensive tutorial on git, but there
+is a lot of information online, e.g., at <a
+href="https://git-scm.com/docs/">https://git-scm.com/docs/</a>.
+
+There are also good youtube tutorials, e.g., <a
+href="https://www.youtube.com/watch?v=8JJ101D3knE">https://www.youtube.com/watch?v=8JJ101D3knE</a>.
+
 
