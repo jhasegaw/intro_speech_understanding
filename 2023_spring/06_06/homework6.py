@@ -1,16 +1,58 @@
 import numpy as np
 
-def dft_matrix(N):
+def voiced_excitation(duration, F0, Fs):
     '''
-    Create a DFT transform matrix, W, of size N.
+    Create voiced speeech excitation.
     
     @param:
-    N (scalar): number of columns in the transform matrix
+    duration (scalar) - length of the excitation, in samples
+    F0 (scalar) - pitch frequency, in Hertz
+    Fs (scalar) - sampling frequency, in samples/second
     
-    @result:
-    W (NxN array): a matrix of dtype='complex' whose (k,n)^th element is:
-           W[k,n] = cos(2*np.pi*k*n/N) - j*sin(2*np.pi*k*n/N)
+    @returns:
+    excitation (np.ndarray) - the excitation signal, such that
+      excitation[n] = -1 if n is an integer multiple of int(np.round(Fs/F0))
+      excitation[n] = 0 otherwise
     '''
-    W = np.zeros((N,N),dtype='complex')
-    return W
+    excitation = 0 # change this
+    return excitation
 
+def resonator(x, F, BW, Fs):
+    '''
+    Generate the output of a resonator.
+    
+    @param:
+    x (np.ndarray(N)) - the excitation signal
+    F (scalar) - resonant frequency, in Hertz
+    BW (scalar) - resonant bandwidth, in Hertz
+    Fs (scalar) - sampling frequency, in samples/second
+    
+    @returns:
+    y (np.ndarray(N)) - resonant output
+    '''
+    y = 0 # change this
+    return y
+
+def synthesize_vowel(duration,F0,F1,F2,F3,F4,BW1,BW2,BW3,BW4,Fs):
+    '''
+    Synthesize a vowel.
+    
+    @param:
+    duration (scalar) - duration in samples
+    F0 (scalar) - pitch frequency in Hertz
+    F1 (scalar) - first formant frequency in Hertz
+    F2 (scalar) - second formant frequency in Hertz
+    F3 (scalar) - third formant frequency in Hertz
+    F4 (scalar) - fourth formant frequency in Hertz
+    BW1 (scalar) - first formant bandwidth in Hertz
+    BW2 (scalar) - second formant bandwidth in Hertz
+    BW3 (scalar) - third formant bandwidth in Hertz
+    BW4 (scalar) - fourth formant bandwidth in Hertz
+    Fs (scalar) - sampling frequency in samples/second
+    
+    @returns:
+    speech (np.ndarray(samples)) - synthesized vowel
+    '''
+    speech = 0 # change this
+    return speech
+    
