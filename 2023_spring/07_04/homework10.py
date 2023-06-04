@@ -1,16 +1,17 @@
-import numpy as np
+import speech_recognition
 
-def dft_matrix(N):
+def transcribe_wavefile(filename, language='en'):
     '''
-    Create a DFT transform matrix, W, of size N.
+    Use sr.Recognizer.AudioFile(filename) as the source,
+    recognize from that source,
+    and return the recognized text.
     
-    @param:
-    N (scalar): number of columns in the transform matrix
+    @params:
+    filename (str) - the filename from which to read the audio
+    language (str) - the language of the audio (optional; default is English)
     
-    @result:
-    W (NxN array): a matrix of dtype='complex' whose (k,n)^th element is:
-           W[k,n] = cos(2*np.pi*k*n/N) - j*sin(2*np.pi*k*n/N)
+    @returns:
+    text (str) - the recognized speech
     '''
-    W = np.zeros((N,N),dtype='complex')
-    return W
-
+    raise RuntimeError("You need to write this part!")
+    return text

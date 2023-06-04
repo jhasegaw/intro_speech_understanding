@@ -1,16 +1,13 @@
-import numpy as np
+import gtts
 
-def dft_matrix(N):
+def synthesize(text, lang, filename):
     '''
-    Create a DFT transform matrix, W, of size N.
+    Use gtts.gTTs(text=text, lang=lang) to synthesize speech, then write it to filename.
     
-    @param:
-    N (scalar): number of columns in the transform matrix
-    
-    @result:
-    W (NxN array): a matrix of dtype='complex' whose (k,n)^th element is:
-           W[k,n] = cos(2*np.pi*k*n/N) - j*sin(2*np.pi*k*n/N)
+    @params:
+    text (str) - the text you want to synthesize
+    lang (str) - the language in which you want to synthesize it
+    filename (str) - the filename in which it should be saved
     '''
-    W = np.zeros((N,N),dtype='complex')
-    return W
+    raise RuntimeError("You need to write this part!")
 
