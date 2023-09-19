@@ -1,6 +1,4 @@
 
-raise RuntimeError("Please remove this line, and modify the lines below as specified in the lecture")
-
 a = None
 b = None
 c = None

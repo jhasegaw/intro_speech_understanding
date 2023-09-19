@@ -1,0 +1,41 @@
+import unittest, homework1
+import numpy as np
+
+class Test(unittest.TestCase):
+    def test_sine1(self):
+        frequency = 880
+        sample_rate = 16000
+        duration = 0.5
+        x_hyp = homework1.generate_pure_tone(frequency, sample_rate, duration)
+        t = np.linspace(0,duration,int(duration*sample_rate))
+        x_ref = np.sin(2*np.pi*frequency*t)
+        
+        self.assertIs(type(x_hyp),type(x_ref),"homework1.generate_pure_tone should return a %s but it returns a %s"%(type(x_ref),type(x_hyp)))
+
+    def test_sine2(self):
+        frequency = 880
+        sample_rate = 16000
+        duration = 0.5
+        x_hyp = homework1.generate_pure_tone(frequency, sample_rate, duration)
+        t = np.linspace(0,duration,int(duration*sample_rate))
+        x_ref = np.sin(2*np.pi*frequency*t)
+        
+        self.assertEqual(len(x_hyp),len(x_ref),"homework1.generate_pure_tone(880,16000,0.5) should return an array of length %d but it returns an array of length %d"%(len(x_ref),len(x_hyp)))
+
+    def test_sine3(self):
+        frequency = 880
+        sample_rate = 16000
+        duration = 0.5
+        x_hyp = homework1.generate_pure_tone(frequency, sample_rate, duration)
+        t = np.linspace(0,duration,int(duration*sample_rate))
+        x_ref = np.sin(2*np.pi*frequency*t)
+        
+        self.assertAlmostEqual(x_ref[56],x_hyp[56], "homework1.generate_pure_tone(880,16000,0.5) should return a signal whose 57th sample is %g, but instead its 57th sample is %g"%(x_ref[56],x_hyp[56]))
+
+        
+suite = unittest.defaultTestLoader.loadTestsFromTestCase(Test)
+result = unittest.TextTestRunner().run(suite)
+
+n_success = result.testsRun - len(result.errors) - len(result.failures)
+print('%d successes out of %d tests run'%(n_success, result.testsRun))
+print('Score: %d%%'%(int(100*(n_success/result.testsRun))))
