@@ -13,5 +13,4 @@ def transcribe_wavefile(filename, language='en'):
     @returns:
     text (str) - the recognized speech
     '''
-    text="FAIL!!  You need to change this function so it works!"
-    return text
+    raise RuntimeError("FAIL!!  You need to change this function so it works!")

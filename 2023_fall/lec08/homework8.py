@@ -11,6 +11,5 @@ def dft_matrix(N):
     W (NxN array): a matrix of dtype='complex' whose (k,n)^th element is:
            W[k,n] = cos(2*np.pi*k*n/N) - j*sin(2*np.pi*k*n/N)
     '''
-    W = np.zeros((N,N),dtype='complex')
-    return W
+    raise RuntimeError("You need to write this part")
 
