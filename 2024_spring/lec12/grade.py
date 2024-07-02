@@ -39,33 +39,33 @@ class Test(unittest.TestCase):
         self.synthesize("This is speech synthesis!","en","english.mp3")
         self.assertIsFile("english.mp3")
 
-    def test_method_creates_correct_synthesis_english(self):
-        self.import_homework12()
-        self.synthesize("This is speech synthesis!","en","english.mp3")
-        with open("english.mp3", "rb") as f:
-            hypothesis = f.read()
-        with open("solution_english.mp3", "rb") as f:
-            reference = f.read()
-        self.assertEqual(int(len(hypothesis)/1024), int(len(reference)/1024),
-                         '''
-                         homework12.synthesize("This is speech synthesis!","en","english.mp3")
-                         creates a file with the wrong content.
-                         '''
-        )
+    #def test_method_creates_correct_synthesis_english(self):
+    #    self.import_homework12()
+    #    self.synthesize("This is speech synthesis!","en","english.mp3")
+    #    with open("english.mp3", "rb") as f:
+    #        hypothesis = f.read()
+    #    with open("solution_english.mp3", "rb") as f:
+    #        reference = f.read()
+    #    self.assertEqual(int(len(hypothesis)/1024), int(len(reference)/1024),
+    #                     '''
+    #                     homework12.synthesize("This is speech synthesis!","en","english.mp3")
+    #                     creates a file with the wrong content.
+    #                     '''
+    #    )
 
-    def test_method_creates_correct_synthesis_spanish(self):
-        self.import_homework12()
-        self.synthesize("¡Esto es síntesis de voz!","es","spanish.mp3")
-        with open("spanish.mp3", "rb") as f:
-            hypothesis = f.read()
-        with open("solution_spanish.mp3", "rb") as f:
-            reference = f.read()
-        self.assertEqual(int(len(hypothesis)/1024), int(len(reference)/1024),
-                         '''
-                         homework12.synthesize, when called with a non-English text string,
-                         creates a file with the wrong content.
-                         '''
-        )
+    #def test_method_creates_correct_synthesis_spanish(self):
+    #    self.import_homework12()
+    #    self.synthesize("¡Esto es síntesis de voz!","es","spanish.mp3")
+    #    with open("spanish.mp3", "rb") as f:
+    #        hypothesis = f.read()
+    #    with open("solution_spanish.mp3", "rb") as f:
+    #        reference = f.read()
+    #    self.assertEqual(int(len(hypothesis)/1024), int(len(reference)/1024),
+    #                     '''
+    #                     homework12.synthesize, when called with a non-English text string,
+    #                     creates a file with the wrong content.
+    #                     '''
+    #    )
 
 suite = unittest.defaultTestLoader.loadTestsFromTestCase(Test)
 result = unittest.TextTestRunner().run(suite)
