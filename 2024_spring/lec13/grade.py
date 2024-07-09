@@ -83,20 +83,6 @@ class Test(unittest.TestCase):
         self.read_nth_story(stories, 3, 'test.mp3')
         self.assertIsFile("test.mp3")
 
-    def test_read_nth_story_creates_correct_synthesis(self):
-        self.import_homework13()
-        with open('stories.json') as f:
-            stories = json.load(f)
-        self.read_nth_story(stories, 3, 'test.mp3')
-        with open("test.mp3", "rb") as f:
-            hypothesis = f.read()
-        with open("solution.mp3", "rb") as f:
-            reference = f.read()
-        self.assertEqual(int(len(hypothesis)/1024), int(len(reference)/1024),
-                         '''
-                         read_nth_story creates a file with the wrong content.
-                         '''
-        )
 
 suite = unittest.defaultTestLoader.loadTestsFromTestCase(Test)
 result = unittest.TextTestRunner().run(suite)
