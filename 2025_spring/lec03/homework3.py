@@ -37,3 +37,4 @@ def my_average(input_List):
         sum_of_elements = sum_of_elements + element
     return sum_of_elements / number_of_elements
 
+
